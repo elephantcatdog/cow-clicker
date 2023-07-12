@@ -1,0 +1,49 @@
+.button {
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    margin: 4px 0px;
+ }
+ 
+ .button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+ }
+ 
+ .button:active {
+    background-color: rgba(255, 255, 255, 0.7);
+ }
+ 
+ .button.buttonFour {
+    position: absolute;
+    bottom: 87px;
+    left: 4px;
+    right: 4px;
+ }
+ 
+ .button.buttonThree {
+    position: absolute;
+    bottom: 58px;
+    left: 4px;
+    right: 4px;
+ }
+ 
+ .button.buttonTwo {
+    position: absolute;
+    bottom: 29px;
+    left: 4px;
+    right: 4px;
+ }
+ 
+ .button.buttonOne {
+    position: absolute;
+    bottom: 0px;
+    left: 4px;
+    right: 4px;
+ }
+ 
+ .button.upgrade {
+    display: none;
+    text-align: left;
+ }
