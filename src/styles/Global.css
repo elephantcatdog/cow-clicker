@@ -1,0 +1,26 @@
+:root {
+  --lightGray: rgb(197, 197, 197);
+  --gray: rgb(150, 150, 150);
+  --darkGray: rgb(71, 71, 71);
+  --lightGreen: rgb(149, 199, 149);
+  --green: rgb(115, 172, 115);
+  --lightBlue: rgb(143, 175, 214);
+  --blue: rgb(0, 132, 255);
+  --gold: rgb(218, 183, 67);
+  --lightRed: rgb(158, 42, 42);
+  --red: rgb(158, 42, 42);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: default;
+}
+
+#root {
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
