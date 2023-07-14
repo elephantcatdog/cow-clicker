@@ -1,10 +1,10 @@
 import React from 'react';
-import { formatClassnames } from '../utilities/util';
+import { formatClassnames } from '../Utilities/util';
 import './Button.css';
 
 type ButtonProps = {
-  id: string;
-  children: React.ReactNode;
+  id?: string;
+  children?: React.ReactNode;
   onClick?: () => void;
   height?: number;
   color?: string;
@@ -12,18 +12,11 @@ type ButtonProps = {
 };
 
 export const Button = (props: ButtonProps) => {
-  const {
-    id,
-    children,
-    onClick,
-    height = 25,
-    color = 'rgb(150, 150, 150)',
-    className,
-  } = props;
+  const { id, children, onClick, height = 25, color = null, className } = props;
 
   return (
     <button
-      id={id}
+      id={id ?? null}
       className={formatClassnames('button', className)}
       style={{
         height: height,
@@ -31,7 +24,7 @@ export const Button = (props: ButtonProps) => {
       }}
       onClick={onClick}
     >
-      {children}
+      {children ?? null}
     </button>
   );
 };

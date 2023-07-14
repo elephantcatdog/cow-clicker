@@ -4,7 +4,7 @@ import './Wallet.css';
 
 export const Wallet = () => {
   return (
-    <Container id="wallet" title="Wallet" color="rgb(115, 172, 115)">
+    <Container id="wallet" title="Wallet" color="var(--green)">
       <div>
         Name:
         <span id="name"></span>

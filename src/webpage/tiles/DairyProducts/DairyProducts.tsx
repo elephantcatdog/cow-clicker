@@ -7,7 +7,7 @@ export const DairyProducts = () => {
     <Container
       id="dairy-products"
       title="Dairy Products"
-      color="rgb(115, 172, 115)"
+      color="var(--lightGreen)"
     >
       <div>
         Milk:

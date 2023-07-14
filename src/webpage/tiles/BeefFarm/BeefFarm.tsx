@@ -7,13 +7,13 @@ type BeefFarmProps = {
 };
 
 export const BeefFarm = (props: BeefFarmProps) => {
-  const { isVisible = false } = props;
+  const { isVisible = true } = props;
 
   return (
     <Container
       id="beef-farm"
       title="Beef Farm"
-      color="rgb(115, 172, 115)"
+      color="var(--red)"
       isVisible={isVisible}
     >
       Beef Farm

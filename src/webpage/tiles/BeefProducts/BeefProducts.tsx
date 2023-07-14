@@ -4,11 +4,7 @@ import './BeefProducts.css';
 
 export const BeefProducts = () => {
   return (
-    <Container
-      id="beef-products"
-      title="Beef Products"
-      color="rgb(115, 172, 115)"
-    >
+    <Container id="beef-products" title="Beef Products" color="var(--lightRed)">
       Beef Products
     </Container>
   );

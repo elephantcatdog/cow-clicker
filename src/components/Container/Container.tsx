@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatClassnames } from '../utilities/util';
+import { formatClassnames } from '../Utilities/util';
 import './Container.css';
 
 type ContainerProps = {

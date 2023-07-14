@@ -4,7 +4,7 @@ import './Demand.css';
 
 export const Demand = () => {
   return (
-    <Container id="demand" title="Demand" color="rgb(115, 172, 115)">
+    <Container id="demand" title="Demand" color="var(--darkGray)">
       Demand
     </Container>
   );

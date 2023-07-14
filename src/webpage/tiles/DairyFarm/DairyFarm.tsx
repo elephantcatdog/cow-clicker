@@ -4,7 +4,7 @@ import './DairyFarm.css';
 
 export const DairyFarm = () => {
   return (
-    <Container id="dairy-farm" title="Dairy Farm" color="rgb(115, 172, 115)">
+    <Container id="dairy-farm" title="Dairy Farm" color="var(--green)">
       <div>
         Herd:
         <span id="dairyNumber"></span>/<span id="fieldSpace"></span> cows

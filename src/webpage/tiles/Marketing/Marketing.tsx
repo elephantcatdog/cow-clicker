@@ -4,7 +4,7 @@ import './Marketing.css';
 
 export const Marketing = () => {
   return (
-    <Container id="marketing" title="Marketing" color="rgb(115, 172, 115)">
+    <Container id="marketing" title="Marketing" color="var(--gray)">
       Marketing
     </Container>
   );

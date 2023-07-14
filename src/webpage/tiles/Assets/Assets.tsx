@@ -4,7 +4,7 @@ import './Assets.css';
 
 export const Assets = () => {
   return (
-    <Container id="assets" title="Assets" color="rgb(115, 172, 115)">
+    <Container id="assets" title="Assets" color="var(--gray)">
       <div>
         Net Worth:
         <span id="net-worth"></span>
