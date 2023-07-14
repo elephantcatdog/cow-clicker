@@ -14,7 +14,7 @@ export const Wallet = () => {
         <span id="user-id"></span>
       </div>
       <div>
-        Money: $<span id="money"></span>
+        Cash: $<span id="cash"></span>
       </div>
     </Container>
   );

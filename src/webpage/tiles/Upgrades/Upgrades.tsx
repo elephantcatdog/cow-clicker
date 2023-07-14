@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../../../../components/Container/Container';
+import { Container } from '../../../components/Container/Container';
 import './Upgrades.css';
 
 type UpgradeOption = {
@@ -79,10 +79,28 @@ const upgradeOptions: UpgradeOption[] = [
   },
 ];
 
+const showCurrentUpgradeOptions = () => {
+  const upgradeOptionsButtons: React.ReactNode[] = [];
+  upgradeOptionsButtons.push(<div>hi</div>);
+
+  upgradeOptions.forEach((option) => {
+    if (option.isAvailable && !option.isPurchased) {
+      upgradeOptionsButtons.push(
+        <div className="button upgrade" onClick={option.upgrade}>
+          {option.name}
+          <span className="upgradePrices">${option.cost}</span>
+        </div>
+      );
+    }
+  });
+
+  return upgradeOptionsButtons;
+};
+
 export const Upgrades = () => {
   return (
     <Container id="upgrades" title="Upgrades" color="rgb(115, 172, 115)">
-      Upgrades
+      {showCurrentUpgradeOptions()}
     </Container>
   );
 };

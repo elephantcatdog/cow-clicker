@@ -1,6 +1,15 @@
 import React from 'react';
-import { Wallet } from '../tiles/Wallet/Wallet';
-import { Demand } from '../tiles/Demand/Demand';
+import {
+  Wallet,
+  Demand,
+  Marketing,
+  Assets,
+  Upgrades,
+  DairyProducts,
+  DairyFarm,
+  BeefProducts,
+  BeefFarm,
+} from '../tiles';
 import './Body.css';
 
 export const Body = () => {
@@ -9,10 +18,20 @@ export const Body = () => {
       <div id="column1" className="column">
         <Wallet />
         <Demand />
+        <Marketing />
       </div>
-      <div id="column2" className="column"></div>
-      <div id="column3" className="column"></div>
-      <div id="column4" className="column"></div>
+      <div id="column2" className="column">
+        <Assets />
+        <Upgrades />
+      </div>
+      <div id="column3" className="column">
+        <DairyProducts />
+        <DairyFarm />
+      </div>
+      <div id="column4" className="column">
+        <BeefProducts />
+        <BeefFarm />
+      </div>
     </div>
   );
 };

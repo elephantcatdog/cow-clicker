@@ -9,6 +9,7 @@ type ContainerProps = {
   height?: number;
   color?: string;
   className?: string;
+  isVisible?: boolean;
 };
 
 export const Container = (props: ContainerProps) => {
@@ -19,20 +20,25 @@ export const Container = (props: ContainerProps) => {
     height = 200,
     color = 'rgb(150, 150, 150)',
     className,
+    isVisible = true,
   } = props;
 
   return (
-    <div
-      id={id}
-      className={formatClassnames('container', className)}
-      style={{
-        height: height,
-        backgroundColor: color,
-      }}
-    >
-      <span className="title">{title}</span>
-      {children}
-    </div>
+    <>
+      {isVisible ? (
+        <div
+          id={id}
+          className={formatClassnames('container', className)}
+          style={{
+            height: height,
+            backgroundColor: color,
+          }}
+        >
+          <div className="title">{title}</div>
+          {children}
+        </div>
+      ) : null}
+    </>
   );
 };
 
