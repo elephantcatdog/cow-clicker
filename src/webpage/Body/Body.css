@@ -10,7 +10,7 @@
   padding: 0 4px;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* Responsive layout - makes a two-column layout instead of a four-column layout */
 @media (max-width: 1000px) {
   .column {
     flex: 50%;
@@ -18,19 +18,23 @@
   }
   #column1 {
     order: 1;
+    flex-shrink: 4;
   }
   #column2 {
     order: 3;
+    flex-shrink: 1;
   }
   #column3 {
     order: 2;
+    flex-shrink: 4;
   }
   #column4 {
     order: 4;
+    flex-shrink: 1;
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - makes a one-column layout instead of a four-column layout */
 @media (max-width: 600px) {
   .column {
     flex: 100%;

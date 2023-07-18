@@ -10,11 +10,12 @@ export const Wallet = () => {
         <span id="name"></span>
       </div>
       <div>
-        License Number:
+        License Number: {(Math.random() * 100000000).toFixed(0)}
         <span id="user-id"></span>
       </div>
       <div>
-        Cash: $<span id="cash"></span>
+        Cash: ${}
+        {/* <span id="cash"></span> */}
       </div>
     </Container>
   );

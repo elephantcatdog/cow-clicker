@@ -5,7 +5,13 @@ import './BeefProducts.css';
 export const BeefProducts = () => {
   return (
     <Container id="beef-products" title="Beef Products" color="var(--lightRed)">
-      Beef Products
+      <div>
+        Beef:
+        <span id="beef"></span>/<span id="beefStorage"></span> pounds
+      </div>
+      <div>Hamburger</div>
+      <div>Steak</div>
+      <div>Leather</div>
     </Container>
   );
 };

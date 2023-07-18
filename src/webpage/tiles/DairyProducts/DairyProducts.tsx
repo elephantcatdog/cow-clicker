@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container } from '../../../components/Container/Container';
+import { MilkContext } from '../../Providers/providers/';
 import './DairyProducts.css';
 
 export const DairyProducts = () => {
+  const { milkInfo, setMilkInfo } = useContext(MilkContext);
+
   return (
     <Container
       id="dairy-products"
@@ -10,8 +13,7 @@ export const DairyProducts = () => {
       color="var(--lightGreen)"
     >
       <div>
-        Milk:
-        <span id="milk"></span>/<span id="milkStorage"></span> gallons
+        Milk: {milkInfo.milkAmountGallons}/{milkInfo.milkStorageGallons} gallons
       </div>
       <div>Butter</div>
       <div>Cheese</div>

@@ -5,7 +5,7 @@ import './Container.css';
 type ContainerProps = {
   id: string;
   title: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   height?: number;
   color?: string;
   className?: string;
@@ -17,7 +17,7 @@ export const Container = (props: ContainerProps) => {
     id,
     title,
     children,
-    height = 200,
+    height,
     color = 'rgb(150, 150, 150)',
     className,
     isVisible = true,
@@ -30,12 +30,12 @@ export const Container = (props: ContainerProps) => {
           id={id}
           className={formatClassnames('container', className)}
           style={{
-            height: height,
+            height: height ?? null,
             backgroundColor: color,
           }}
         >
           <div className="title">{title}</div>
-          {children}
+          {children ?? null}
         </div>
       ) : null}
     </>

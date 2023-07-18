@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Wallet,
+  Watch,
   Demand,
   Marketing,
   Assets,
@@ -17,6 +18,7 @@ export const Body = () => {
     <div className="body">
       <div id="column1" className="column">
         <Wallet />
+        <Watch />
         <Demand />
         <Marketing />
       </div>

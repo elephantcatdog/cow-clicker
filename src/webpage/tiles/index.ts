@@ -8,3 +8,4 @@ export { Marketing } from './Marketing/Marketing';
 export { Opportunities } from './Opportunities/Opportunities';
 export { Upgrades } from './Upgrades/Upgrades';
 export { Wallet } from './Wallet/Wallet';
+export { Watch } from './Watch/Watch';
