@@ -1,6 +1,7 @@
 export { Assets } from './Assets/Assets';
 export { BeefFarm } from './BeefFarm/BeefFarm';
 export { BeefProducts } from './BeefProducts/BeefProducts';
+export { Calendar } from './Calendar/Calendar';
 export { DairyFarm } from './DairyFarm/DairyFarm';
 export { DairyProducts } from './DairyProducts/DairyProducts';
 export { Demand } from './Demand/Demand';
@@ -8,4 +9,3 @@ export { Marketing } from './Marketing/Marketing';
 export { Opportunities } from './Opportunities/Opportunities';
 export { Upgrades } from './Upgrades/Upgrades';
 export { Wallet } from './Wallet/Wallet';
-export { Watch } from './Watch/Watch';

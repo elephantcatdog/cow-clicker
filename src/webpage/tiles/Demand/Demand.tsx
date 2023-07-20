@@ -1,43 +1,51 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Container } from '../../../components/Container/Container';
+import { DemandContext, TimeContext } from '../../Providers/providers/';
 import './Demand.css';
 
 export const Demand = () => {
-  const [milkPrice, setMilkPrice] = React.useState(1.0);
+  // const [milkPrice, setMilkPrice] = React.useState(1.0);
+  const { demandInfo, setDemandInfo } = useContext(DemandContext);
+  const { time, setTime } = useContext(TimeContext);
 
   const checkMilkPriceParameters = (milkPrice: number) => {
-    const minimumMilkPrice = 1.0;
-    const maximumMilkPrice = 5.0;
-
-    if (milkPrice < minimumMilkPrice) {
-      return minimumMilkPrice;
-    } else if (milkPrice > maximumMilkPrice) {
-      return maximumMilkPrice;
+    if (milkPrice < demandInfo.minimumMilkPrice) {
+      return demandInfo.minimumMilkPrice;
+    } else if (milkPrice > demandInfo.maximumMilkPrice) {
+      return demandInfo.maximumMilkPrice;
     } else {
       return milkPrice;
     }
   };
 
   const adjustMilkPrice = () => {
+    const milkPrice = demandInfo.milkPrice;
+    let newMilkPrice = demandInfo.milkPrice;
     const randomNumber = Math.random();
     const adjustmentNumber = Math.random();
 
     if (randomNumber < 0.5) {
       return;
     } else if (randomNumber < 0.7) {
-      setMilkPrice(checkMilkPriceParameters(milkPrice + adjustmentNumber / 2));
+      newMilkPrice = checkMilkPriceParameters(milkPrice + adjustmentNumber / 4);
     } else if (randomNumber < 0.9) {
-      setMilkPrice(checkMilkPriceParameters(milkPrice - adjustmentNumber / 2));
+      newMilkPrice = checkMilkPriceParameters(milkPrice - adjustmentNumber / 4);
     } else if (randomNumber < 0.95) {
-      setMilkPrice(checkMilkPriceParameters(milkPrice + adjustmentNumber));
+      newMilkPrice = checkMilkPriceParameters(milkPrice + adjustmentNumber / 2);
     } else {
-      setMilkPrice(checkMilkPriceParameters(milkPrice - adjustmentNumber));
+      newMilkPrice = checkMilkPriceParameters(milkPrice - adjustmentNumber / 2);
     }
+
+    setDemandInfo({ ...demandInfo, milkPrice: newMilkPrice });
   };
+
+  useEffect(() => {
+    adjustMilkPrice();
+  }, [time]);
 
   return (
     <Container id="demand" title="Demand" color="var(--gray)">
-      Milk Price: ${milkPrice.toFixed(2)}
+      Milk Price: ${demandInfo.milkPrice.toFixed(2)} per gallon
     </Container>
   );
 };

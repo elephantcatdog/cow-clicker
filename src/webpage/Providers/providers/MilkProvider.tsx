@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-export type MilkInfo = {
+type MilkInfo = {
   milkAmountGallons: number;
   milkStorageGallons: number;
 };

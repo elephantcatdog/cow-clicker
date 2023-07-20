@@ -15,10 +15,10 @@ export const DairyProducts = () => {
       <div>
         Milk: {milkInfo.milkAmountGallons}/{milkInfo.milkStorageGallons} gallons
       </div>
-      <div>Butter</div>
-      <div>Cheese</div>
-      <div>Yogurt</div>
-      <div>Ice Cream</div>
+      <div>Butter: </div>
+      <div>Cheese: </div>
+      <div>Yogurt: </div>
+      <div>Ice Cream: </div>
     </Container>
   );
 };

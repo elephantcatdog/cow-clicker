@@ -1,5 +1,10 @@
 import React from 'react';
-import { MilkProvider } from './providers/';
+import {
+  TimeProvider,
+  MilkProvider,
+  MarketingProvider,
+  DemandProvider,
+} from './providers/';
 
 type ProvidersProps = {
   children?: React.ReactNode;
@@ -8,7 +13,15 @@ type ProvidersProps = {
 export const Providers = (props: ProvidersProps) => {
   const { children } = props;
 
-  return <MilkProvider>{children ?? null}</MilkProvider>;
+  return (
+    <MilkProvider>
+      <MarketingProvider>
+        <DemandProvider>
+          <TimeProvider>{children ?? null}</TimeProvider>
+        </DemandProvider>
+      </MarketingProvider>
+    </MilkProvider>
+  );
 };
 
 export default Providers;
