@@ -18,7 +18,7 @@ export const TimeProvider = (props: TimeProviderProps) => {
 
   useEffect(() => {
     setTimeout(() => {
-      // update the time
+      // update the time by one hour
       const newTime = new Date(time);
       newTime.setHours(newTime.getHours() + 1);
       setTime(newTime);

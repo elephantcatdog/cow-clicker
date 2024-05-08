@@ -10,6 +10,7 @@ import {
   DairyFarm,
   BeefProducts,
   BeefFarm,
+  Opportunities,
 } from '../tiles';
 import './Body.css';
 
@@ -25,6 +26,7 @@ export const Body = () => {
       <div id="column2" className="column">
         <Assets />
         <Upgrades />
+        <Opportunities />
       </div>
       <div id="column3" className="column">
         <DairyProducts />

@@ -5,6 +5,7 @@ import './Upgrades.css';
 type UpgradeOption = {
   name: string;
   description: string;
+  id: string;
   cost: number;
   isAvailable: boolean;
   isPurchased: boolean;
@@ -15,6 +16,7 @@ const upgradeOptions: UpgradeOption[] = [
   {
     name: 'Buy Milking Parlor',
     description: 'Enables automatic milking',
+    id: 'milk-parlor',
     cost: 5000,
     isAvailable: true,
     isPurchased: false,
@@ -23,6 +25,7 @@ const upgradeOptions: UpgradeOption[] = [
   {
     name: 'Buy New Field',
     description: 'Increases the number of cows that can be kept by 10 cows',
+    id: '',
     cost: 0,
     isAvailable: true,
     isPurchased: false,
@@ -32,6 +35,7 @@ const upgradeOptions: UpgradeOption[] = [
     name: 'Buy Storage Tank',
     description:
       'Increases the amount of milk that can be stored by 500 gallons',
+    id: '',
     cost: 0,
     isAvailable: true,
     isPurchased: false,
@@ -40,6 +44,7 @@ const upgradeOptions: UpgradeOption[] = [
   {
     name: 'Upgrade Dairy Herd to Jersey',
     description: 'Increases milk production to 6.4 gallons per cow per day',
+    id: 'jersey-herd',
     cost: 0,
     isAvailable: false,
     isPurchased: false,
@@ -48,6 +53,7 @@ const upgradeOptions: UpgradeOption[] = [
   {
     name: 'Upgrade Dairy Herd to Guernsey',
     description: 'Increases milk production to 6.7 gallons per cow per day',
+    id: 'guernsey-herd',
     cost: 0,
     isAvailable: false,
     isPurchased: false,
@@ -56,6 +62,7 @@ const upgradeOptions: UpgradeOption[] = [
   {
     name: 'Upgrade Dairy Herd to Ayrshire',
     description: 'Increases milk production to 7.4 gallons per cow per day',
+    id: 'ayrshire-herd',
     cost: 0,
     isAvailable: false,
     isPurchased: false,
@@ -64,6 +71,7 @@ const upgradeOptions: UpgradeOption[] = [
   {
     name: 'Upgrade Dairy Herd to Brown Swiss',
     description: 'Increases milk production to 8.0 gallons per cow per day',
+    id: 'brownswiss-herd',
     cost: 0,
     isAvailable: false,
     isPurchased: false,
@@ -72,6 +80,7 @@ const upgradeOptions: UpgradeOption[] = [
   {
     name: 'Upgrade Dairy Herd to Holstein',
     description: 'Increases milk production to 9.8 gallons per cow per day',
+    id: 'holstein-herd',
     cost: 0,
     isAvailable: false,
     isPurchased: false,
@@ -101,7 +110,7 @@ const showCurrentUpgradeOptions = () => {
 
 export const Upgrades = () => {
   return (
-    <Container id="upgrades" title="Upgrades" color="var(--lightGray)">
+    <Container id="upgrades" title="Upgrades" color="var(--lighterBlue)">
       {showCurrentUpgradeOptions()}
     </Container>
   );

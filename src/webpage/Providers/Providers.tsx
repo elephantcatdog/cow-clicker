@@ -1,9 +1,10 @@
 import React from 'react';
 import {
-  TimeProvider,
-  MilkProvider,
-  MarketingProvider,
+  BeefProvider,
   DemandProvider,
+  MarketingProvider,
+  MilkProvider,
+  TimeProvider,
 } from './providers/';
 
 type ProvidersProps = {
@@ -15,11 +16,13 @@ export const Providers = (props: ProvidersProps) => {
 
   return (
     <MilkProvider>
-      <MarketingProvider>
-        <DemandProvider>
-          <TimeProvider>{children ?? null}</TimeProvider>
-        </DemandProvider>
-      </MarketingProvider>
+      <BeefProvider>
+        <MarketingProvider>
+          <DemandProvider>
+            <TimeProvider>{children ?? null}</TimeProvider>
+          </DemandProvider>
+        </MarketingProvider>
+      </BeefProvider>
     </MilkProvider>
   );
 };

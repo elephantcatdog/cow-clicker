@@ -2,9 +2,20 @@ import React from 'react';
 import { Container } from '../../../components/Container/Container';
 import './BeefProducts.css';
 
-export const BeefProducts = () => {
+type BeefProductsProps = {
+  isVisible?: boolean;
+};
+
+export const BeefProducts = (props: BeefProductsProps) => {
+  const { isVisible = true } = props;
+
   return (
-    <Container id="beef-products" title="Beef Products" color="var(--lightRed)">
+    <Container
+      id="beef-products"
+      title="Beef Products"
+      color="var(--lightRed)"
+      isVisible={isVisible}
+    >
       <div>
         Beef:
         <span id="beef"></span>/<span id="beefStorage"></span> pounds

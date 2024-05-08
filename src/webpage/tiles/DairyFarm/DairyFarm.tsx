@@ -32,14 +32,11 @@ export const DairyFarm = (props: DairyFarmProps) => {
     const newMilkAmountGallons = milkInfo.milkAmountGallons + 1;
     if (newMilkAmountGallons > milkInfo.milkStorageGallons) {
       setMilkInfo({
+        ...milkInfo,
         milkAmountGallons: milkInfo.milkStorageGallons,
-        milkStorageGallons: milkInfo.milkStorageGallons,
       });
     } else {
-      setMilkInfo({
-        milkAmountGallons: newMilkAmountGallons,
-        milkStorageGallons: milkInfo.milkStorageGallons,
-      });
+      setMilkInfo({ ...milkInfo, milkAmountGallons: newMilkAmountGallons });
     }
   };
 
@@ -76,7 +73,7 @@ export const DairyFarm = (props: DairyFarmProps) => {
           </Button>
           <Button id="buy-dairy-cow">Buy Dairy Cow</Button>
           <Button id="buy-dairy-cow" className="disabled">
-            Upgrade Dairy Cow
+            Upgrade Dairy Cow Herd
           </Button>
         </div>
       </div>
